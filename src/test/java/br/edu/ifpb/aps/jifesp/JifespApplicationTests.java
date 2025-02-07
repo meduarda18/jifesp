@@ -1,4 +1,4 @@
-package br.edu.ifpb.aps.jifesp.jifesp;
+package br.edu.ifpb.aps.jifesp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
