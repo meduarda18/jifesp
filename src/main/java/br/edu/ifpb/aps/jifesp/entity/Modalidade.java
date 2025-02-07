@@ -1,4 +1,4 @@
-package br.edu.ifpb.aps.jifesp.jifesp.entity;
+package br.edu.ifpb.aps.jifesp.entity;
 
 public enum Modalidade {
     FUTSAL_ADULTO,
