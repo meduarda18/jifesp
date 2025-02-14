@@ -4,13 +4,13 @@ import java.util.List;
 
 public class Equipe {
     int idEquipe;
-    String nome;
+    String nomeEquipe;
     String nomeCapitao;
     List<Atleta> jogadores;
     List<Integer> matriculas;
 
-    public Equipe(String nome, String nomeCapitao, List<Atleta> jogadores, List<Integer> matriculas) {
-        this.nome = nome;
+    public Equipe(String nomeEquipe, String nomeCapitao, List<Atleta> jogadores, List<Integer> matriculas) {
+        this.nomeEquipe = nomeEquipe;
         this.nomeCapitao = nomeCapitao;
         this.jogadores = jogadores;
         this.matriculas = matriculas;
@@ -19,8 +19,8 @@ public class Equipe {
     public int getIdEquipe() {
         return idEquipe;
     }
-    public String getNome() {
-        return nome;
+    public String getNomeEquipe() {
+        return nomeEquipe;
     }
     public String getNomeCapitao() {
         return nomeCapitao;
