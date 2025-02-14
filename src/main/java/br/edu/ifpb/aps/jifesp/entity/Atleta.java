@@ -1,29 +1,35 @@
 package br.edu.ifpb.aps.jifesp.entity;
-
-import lombok.Getter;
-import lombok.Setter;
-
 public class Atleta {
+    int id_atleta;
+    String nome;
+    int matricula;
+    Situacao situacao;
 
-    @Getter
-    private Long id;
-    @Getter
-    @Setter
-    private String nome;
-    @Getter
-    @Setter
-    private String situacao;
-    @Getter
-    @Setter
-    private int matricula;
-
-    //construtor padrão caso preciso do jpa
-    public Atleta() {
-    }
-
-    public Atleta(String nome, String situacao, int matricula) {
+    public Atleta(String nome, int matricula, Situacao situacao) {
         this.nome = nome;
-        this.situacao = situacao;
         this.matricula = matricula;
+        this.situacao = situacao.INAPTO;
     }
+    public int getId_atleta() {
+        return id_atleta;
+    }
+    public String getNome() {
+        return nome;
+    }
+    public int getMatricula() {
+        return matricula;
+    }
+    public Situacao getSituacao() {
+        return situacao;
+    }
+    public void setSituacao(Situacao situacao) {
+        this.situacao = situacao;
+    }
+
+    void inscreveModalidade(){}
+    void inscreveEquipe(){}
+    void buscaModalidade(){}
+    void buscarJogo(){}
+    void buscarRegulamento(){}
 }
+
