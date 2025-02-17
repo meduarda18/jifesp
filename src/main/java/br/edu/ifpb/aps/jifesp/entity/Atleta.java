@@ -1,6 +1,6 @@
 package br.edu.ifpb.aps.jifesp.entity;
 public class Atleta {
-    int id_atleta;
+    int idAtleta;
     String nome;
     int matricula;
     Situacao situacao;
@@ -8,10 +8,10 @@ public class Atleta {
     public Atleta(String nome, int matricula, Situacao situacao) {
         this.nome = nome;
         this.matricula = matricula;
-        this.situacao = situacao.INAPTO;
+        this.situacao = situacao;
     }
-    public int getId_atleta() {
-        return id_atleta;
+    public int getIdAtleta() {
+        return idAtleta;
     }
     public String getNome() {
         return nome;
