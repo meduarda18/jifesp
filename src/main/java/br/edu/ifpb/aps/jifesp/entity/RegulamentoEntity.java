@@ -5,9 +5,11 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "regulamentos")
 public class RegulamentoEntity {
-    int idRegulamento;
-    NomeModalidade nome;
-    String descricao;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int idRegulamento;
+    private NomeModalidade nome;
+    private String descricao;
     
     public RegulamentoEntity(NomeModalidade nome, String descricao) {
         this.nome = nome;
