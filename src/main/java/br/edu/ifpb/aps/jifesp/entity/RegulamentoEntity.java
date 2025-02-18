@@ -1,5 +1,9 @@
 package br.edu.ifpb.aps.jifesp.entity;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "regulamentos")
 public class RegulamentoEntity {
     int idRegulamento;
     NomeModalidade nome;
@@ -13,6 +17,8 @@ public class RegulamentoEntity {
     public int getIdRegulamento() {
         return idRegulamento;
     }
+    
+    @Enumerated(EnumType.STRING)
     public NomeModalidade getNome() {
         return nome;
     }
