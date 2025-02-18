@@ -3,11 +3,11 @@ package br.edu.ifpb.aps.jifesp.entity;
 import java.util.List;
 
 public class EquipeEntity {
-    Long idEquipe;
-    String nomeEquipe;
-    String nomeCapitao;
-    List<AtletaEntity> jogadores;
-    List<Integer> matriculas;
+    private Long idEquipe;
+    private String nomeEquipe;
+    private String nomeCapitao;
+    private List<AtletaEntity> jogadores;
+    private List<Integer> matriculas;
 
     public EquipeEntity(String nomeEquipe, String nomeCapitao, List<AtletaEntity> jogadores, List<Integer> matriculas) {
         this.nomeEquipe = nomeEquipe;
