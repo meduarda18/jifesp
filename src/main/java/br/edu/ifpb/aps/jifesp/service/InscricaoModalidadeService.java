@@ -6,9 +6,15 @@ import br.edu.ifpb.aps.jifesp.entity.*;
 import java.util.List;
 
 public class InscricaoModalidadeService {
-/*
-    public void inscreveModalidade(AtletaEntity atleta, ModalidadeEntity modalidade) {
 
+    private AtletaRepository atletarepository;
+    private ModalidadeRepository modalidaderepository;
+
+    public void inscreveModalidade(AtletaEntity atleta, ModalidadeEntity modalidade) {
+        if(atleta == null || modalidade == null){
+
+        }
+        
     }
 
     public void inscreveEquipe(AtletaEntity atleta, EquipeEntity equipe) {
@@ -27,6 +33,6 @@ public class InscricaoModalidadeService {
     public RegulamentoEntity buscarRegulamento(ModalidadeEntity modalidade) {
         // Retorna o regulamento da modalidade
     }
-*/
+
 }
 
