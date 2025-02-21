@@ -14,9 +14,9 @@ import jakarta.persistence.Table;
 public class JogoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long idJogo;
-    List<AtletaEntity> participantes;
-    int placar;
+    private Long idJogo;
+    private List<AtletaEntity> participantes;
+    private int placar;
 
     public JogoEntity(List<AtletaEntity> participantes, int placar) {
         this.participantes = participantes;

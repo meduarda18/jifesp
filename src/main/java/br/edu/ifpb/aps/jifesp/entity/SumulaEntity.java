@@ -1,11 +1,11 @@
 package br.edu.ifpb.aps.jifesp.entity;
 
 public class SumulaEntity {
-    int idSumula;
-    JogoEntity jogo;
-    String fase;
-    int resultado;
-    String observacoes;
+    private int idSumula;
+    private JogoEntity jogo;
+    private String fase;
+    private int resultado;
+    private String observacoes;
     
     public SumulaEntity(JogoEntity jogo, String fase, int resultado, String observacoes) {
         this.jogo = jogo;

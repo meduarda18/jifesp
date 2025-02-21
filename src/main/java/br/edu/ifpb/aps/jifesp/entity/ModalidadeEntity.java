@@ -1,9 +1,9 @@
 package br.edu.ifpb.aps.jifesp.entity;
 
 public class ModalidadeEntity {
-    Long idModalidade;
-    NomeModalidade nome;
-    int quantidadeParticipantes;
+    private Long idModalidade;
+    private NomeModalidade nome;
+    private int quantidadeParticipantes;
     
 
     public ModalidadeEntity(NomeModalidade nome, int quantidadeParticipantes) {

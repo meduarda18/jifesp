@@ -1,8 +1,8 @@
 package br.edu.ifpb.aps.jifesp.entity;
 
 public class CampeonatoEntity {
-    Long idCampeonato;
-    String nome;
+    private Long idCampeonato;
+    private String nome;
 
     public CampeonatoEntity(String nome) {
         this.nome = nome;

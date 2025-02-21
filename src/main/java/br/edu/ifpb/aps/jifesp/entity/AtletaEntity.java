@@ -9,7 +9,7 @@ import java.util.List;
 @Table(name = "atletas")
 public class AtletaEntity extends UsuarioEntity {
 
-    Situacao situacao;
+    private Situacao situacao;
     private List<ModalidadeEntity> modalidades;
 
     public AtletaEntity(String nome, int matricula){
