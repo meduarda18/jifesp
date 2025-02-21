@@ -28,7 +28,7 @@ public class CampeonatoService implements CrudService <CampeonatoEntity, Long> {
         if (campeonatoExistente.isPresent()) {
             return campeonatoRepository.save(campeonatoEntity);
         }
-        System.out.println("Campeonatos não encontrado.");
+        System.out.println("Campeonato não encontrado.");
         return null;
     }
 

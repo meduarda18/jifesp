@@ -10,10 +10,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import br.edu.ifpb.aps.jifesp.entity.AtletaEntity;
 import br.edu.ifpb.aps.jifesp.entity.RegulamentoEntity;
-import br.edu.ifpb.aps.jifesp.service.AtletaService;
 import br.edu.ifpb.aps.jifesp.service.RegulamentoService;
 
 @RestController
