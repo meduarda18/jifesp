@@ -4,13 +4,17 @@ package br.edu.ifpb.aps.jifesp.service;
 import br.edu.ifpb.aps.jifesp.entity.*;
 import br.edu.ifpb.aps.jifesp.repository.AtletaRepository;
 import br.edu.ifpb.aps.jifesp.repository.EquipeRepository;
+import br.edu.ifpb.aps.jifesp.repository.JogoRepository;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class InscricaoModalidadeService {
 
     private AtletaRepository atletarepository;
     private EquipeRepository equipeRepository;
+    private JogoRepository jogoRepository;
+
 
     public void inscreveModalidade(AtletaEntity atleta, ModalidadeEntity modalidade) {
         if(atleta == null || modalidade == null){
@@ -23,27 +27,43 @@ public class InscricaoModalidadeService {
         atletarepository.save(atleta);
         
     }
-/*
-    public void inscreveEquipe(Long capitaoId, String nomeEquipe, List<AtletaEntity> participantes, Long modalidadeId) {
-        
-        
 
+    public void inscreveEquipe(AtletaEntity atleta, EquipeEntity equipe) {
+        if(atleta == null || equipe == null){
+            throw new IllegalArgumentException("Atleta e Modalidade devem ser informados");
+        }
+        if (atleta.getEquipe() != null) {
+            throw new IllegalStateException("Atleta já participa de uma equipe");
+        }
 
+        equipe.getJogadores().add(atleta);
+        atleta.setEquipe(equipe);
+
+        atletarepository.save(atleta);
+        equipeRepository.save(equipe);
         
     }
 
     public List<ModalidadeEntity> buscaModalidade(AtletaEntity atleta) {
-        // Retorna as modalidades em que o atleta está inscrito
+        if (atleta == null) {
+            throw new IllegalArgumentException("Atleta não localizado");
+        }
         return atleta.getModalidades();
     }
 
     public JogoEntity buscarJogo(AtletaEntity atleta) {
-        // Lógica para buscar o jogo associado ao atleta, se necessário
+        if (atleta == null) {
+            throw new IllegalArgumentException("Atleta não localizado");
+        }
+        return jogoRepository.findByAtletasContains(atleta).orElseThrow(()-> new NoSuchElementException());
     }
 
-    public RegulamentoEntity buscarRegulamento(ModalidadeEntity modalidade) {
-        // Retorna o regulamento da modalidade
+    public String buscarRegulamento(ModalidadeEntity modalidade) {
+        if (modalidade == null) {
+            throw new IllegalArgumentException("Modalidade não pode ser localizada");
+        }
+        return modalidade.getRegulamento().getDescricao();    
     }
-*/
+
 }
 

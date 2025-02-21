@@ -11,7 +11,9 @@ public class AtletaEntity extends UsuarioEntity {
 
     private Situacao situacao;
     private List<ModalidadeEntity> modalidades;
+    private EquipeEntity equipe;
 
+    
     public AtletaEntity(String nome, int matricula){
         super(nome, matricula);
     }
@@ -33,6 +35,13 @@ public class AtletaEntity extends UsuarioEntity {
     public void setSituacao(Situacao situacao) {
         this.situacao = situacao;
     }
+    public EquipeEntity getEquipe() {
+            return equipe;
+        }
+
+    public void setEquipe(EquipeEntity equipe) {
+            this.equipe = equipe;
+        }
 
 }
 
