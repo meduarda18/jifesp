@@ -2,7 +2,19 @@ package br.edu.ifpb.aps.jifesp.entity;
 
 import java.util.List;
 
+import jakarta.annotation.Generated;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "equipes")
 public class EquipeEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idEquipe;
     private String nomeEquipe;
     private String nomeCapitao;
@@ -25,6 +37,7 @@ public class EquipeEntity {
     public String getNomeCapitao() {
         return nomeCapitao;
     }
+    @ManyToMany
     public List<AtletaEntity> getJogadores() {
         return jogadores;
     }

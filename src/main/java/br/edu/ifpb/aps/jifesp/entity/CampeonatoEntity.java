@@ -1,6 +1,16 @@
 package br.edu.ifpb.aps.jifesp.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="campeonato")
 public class CampeonatoEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idCampeonato;
     private String nome;
 

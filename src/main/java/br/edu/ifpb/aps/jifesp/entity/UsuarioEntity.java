@@ -28,8 +28,4 @@ public abstract class UsuarioEntity {
         return matricula;
     }
     
-    void buscarModalidade(){}
-    void buscarJogo(){}
-    void buscarRegulamento(){}
-    void buscarResultados(){}
 }
