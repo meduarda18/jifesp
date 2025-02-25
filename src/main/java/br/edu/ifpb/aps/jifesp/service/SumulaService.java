@@ -14,7 +14,6 @@ public class SumulaService implements CrudService<SumulaEntity, Long>{
     public SumulaService(SumulaRepository sumulaRepository){
         this.sumulaRepository = sumulaRepository;
     }
-
     @Override
     public SumulaEntity save(SumulaEntity sumulaEntity) {
         return sumulaRepository.save(sumulaEntity);

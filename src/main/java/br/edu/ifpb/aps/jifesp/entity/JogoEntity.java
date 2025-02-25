@@ -16,12 +16,10 @@ public class JogoEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idJogo;
     private List<AtletaEntity> participantes;
-    private List<EquipeEntity> equipes;
     private int placar;
 
-    public JogoEntity(List<AtletaEntity> participantes, List<EquipeEntity> equipes, int placar) {
+    public JogoEntity(List<AtletaEntity> participantes, int placar) {
         this.participantes = participantes;
-        this.equipes = equipes;
         this.placar = placar;
     }
 
@@ -32,10 +30,6 @@ public class JogoEntity {
     @ManyToMany
     public List<AtletaEntity> getParticipantes() {
         return participantes;
-    }
-
-    public List<EquipeEntity> getEquipes() {
-        return equipes;
     }
 
     public int getPlacar() {

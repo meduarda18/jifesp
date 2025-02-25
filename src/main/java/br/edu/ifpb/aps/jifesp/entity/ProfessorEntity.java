@@ -8,7 +8,12 @@ public class ProfessorEntity extends UsuarioEntity {
         super(nome, matricula);
     }
 
-
+    void cadastrarModalidade(){}
+    void cadastrarJogo(){}
+    void cadastrarRegulamento(){}
+    void atualizarModalidade(){}
+    void deletarModalidade(){}
+    void deletarRegulamento(){}
     void sortearChaves(){}
 
     public Optional<ProfessorEntity> findById(Long id) {
